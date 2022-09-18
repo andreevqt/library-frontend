@@ -1,0 +1,23 @@
+.nav {
+  margin: 64px 40px 0 0;
+  max-width: 100px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item a{
+  display: block;
+  padding: 15px 20px 15px 0;
+  color: var(--border-color);
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: 16px;; 
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-item-active a{
+  font-weight: 600;
+  color: var(--primary-text);
+}

@@ -1,0 +1,52 @@
+.select {
+  border-radius: 3px;
+  position: relative;
+  appearance: none;
+  padding: 15px 15px;
+  color: var(--body-color);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  width: 100%;
+  display: block;
+  background-color: var(--white);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23484848' viewBox='0 0 24 24'%3E%3Cpath d='M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: center right 15px;
+  border: 1px solid var(--border-color-input);
+}
+
+.select:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(36, 41, 47, 0.2);
+}
+
+.select::-ms-expand {
+  display: none;
+}
+
+.select::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.label {
+  color: var(--body-color);
+  display: inline-block;
+  font-family: var(--font-family);
+  font-weight: 400;
+  line-height: 1;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,38 @@
+.button {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--body-color);
+  text-decoration: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.primary {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--white);
+}
+
+.primary:focus {
+  background-color: #191c21;
+  box-shadow: 0 0 0 0.2rem rgba(36, 41, 47, 0.2);
+}
+
+.danger {
+  background-color: var(--danger);
+  border: 1px solid var(--danger);
+  color: #fff;
+}
+
+.danger:focus {
+  background-color: #fc2a04;
+  box-shadow: 0 0 0 0.2rem rgba(252, 63, 29, 0.2);
+}

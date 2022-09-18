@@ -1,0 +1,32 @@
+.content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section {
+  width: 600px;
+}
+
+.title {
+  color: var(--body-color);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.sidebar {
+  margin: 64px 0 0 40px;
+  flex-direction: 0 0 170px;
+  width: 170px;
+}
+
+.sidebar button,
+.sidebar a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
