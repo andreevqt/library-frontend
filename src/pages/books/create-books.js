@@ -75,7 +75,7 @@ export const CreateBooks = ({
           </Form>
         )}
       </Formik>
-      {isLoading && <Preloader />}
+      <Preloader isShown={isLoading} />
     </Base>
   );
 };
