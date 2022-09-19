@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { CreateBooks, ListBooks } from '../../pages';
+import { EditBooks } from '../../pages/books/edit-books';
 import * as api from '../../services/api';
 
 export const CustomSwitch = () => {
@@ -22,7 +23,7 @@ export const CustomSwitch = () => {
         <CreateBooks genres={genres} authors={authors} />
       </Route>
       <Route path="/books/edit/:id">
-        <CreateBooks genres={genres} authors={authors} />
+        <EditBooks genres={genres} authors={authors} />
       </Route>
       <Route path="/books">
         <ListBooks />

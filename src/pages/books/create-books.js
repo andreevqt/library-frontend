@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
+import { useHistory } from 'react-router';
 import { Input } from '../../components/input';
 import { Base } from '../../layouts/base';
 import { Select } from '../../components/select';
@@ -7,6 +8,7 @@ import * as api from '../../services/api';
 import style from './style.module.css';
 import { Button } from '../../components/button';
 import { schema } from './schema';
+import { Preloader } from '../../components/preloader';
 
 const initialValues = {
   title: '',
@@ -18,8 +20,12 @@ export const CreateBooks = ({
   genres,
   authors
 }) => {
+  const [isLoading, setLoading] = useState(false);
+  const history = useHistory();
+
   const handleSubmit = (data, { setSubmitting }) => {
-    api.books.create(data).finally(() => setSubmitting(false));
+    setLoading(true);
+    api.books.create(data).then(() => history.push('/books'));
   };
 
   return (
@@ -49,15 +55,19 @@ export const CreateBooks = ({
             />
             <Select
               value={values.genreId}
-              name="genere"
+              name="genreId"
               label="Genre"
               options={genres}
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
             <Select
               value={values.authorId}
-              name="author"
+              name="authorId"
               label="Author"
               options={authors}
+              onChange={handleChange}
+              onBlur={handleBlur}
             />
             <div className={style['buttons']}>
               <Button htmlType="submit" >Create</Button>
@@ -65,6 +75,7 @@ export const CreateBooks = ({
           </Form>
         )}
       </Formik>
+      {isLoading && <Preloader />}
     </Base>
   );
 };

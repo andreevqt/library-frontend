@@ -4,7 +4,8 @@ import style from './style.module.css';
 
 export const Select = ({
   label,
-  selected,
+  value,
+  name,
   options = [],
   onChange,
   onBlur
@@ -14,7 +15,14 @@ export const Select = ({
   return (
     <div className={style['field']}>
       <label htmlFor={id} className={style['label']}>{label}</label>
-      <select id={id} className={style['select']} onChange={onChange} onBlur={onBlur} value={selected}>
+      <select
+        id={id}
+        className={style['select']}
+        onChange={onChange}
+        onBlur={onBlur}
+        name={name}
+        value={value}
+      >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}

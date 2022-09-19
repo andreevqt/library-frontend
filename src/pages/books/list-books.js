@@ -42,7 +42,7 @@ export const ListBooks = () => {
           />
         ))}
       </Table>
-      {isLoading && (<Preloader />)}
+      <Preloader isShown={isLoading} />
     </Base>
   );
 };

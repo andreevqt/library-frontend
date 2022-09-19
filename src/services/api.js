@@ -7,8 +7,10 @@ const request = axios.create({
 });
 
 export const books = {
+  get: (id) => request.get(`/books/${id}`).then((response) => response.data.book),
   list: () => request.get('/books').then((response) => response.data.items),
-  create: (data) => request.post('/books', data).then((response) => response.data),
+  create: (data) => request.post('/books', data).then((response) => response.data.book),
+  update: (id, data) => request.patch(`/books/${id}`, data).then((response) => response.data),
   delete: (id) => request.delete(`/books/${id}`).then((response) => response.data)
 };
 

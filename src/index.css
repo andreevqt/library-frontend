@@ -1,6 +1,6 @@
 :root {
   --primary: #24292f;
-  --primary-text:  #24292f;
+  --primary-text: #24292f;
   --danger: #fc3f1d;
   --border-color-input: #484848;
   --border-color-input: #dfdede;
@@ -19,4 +19,22 @@ body {
 ::before,
 ::after {
   box-sizing: border-box;
+}
+
+.transition-enter {
+  opacity: 0;
+}
+
+.transition-enter-active {
+  opacity: 1;
+  transition: opacity 0.45s;
+}
+
+.transition-exit {
+  opacity: 1;
+}
+
+.transition-exit-active {
+  opacity: 0;
+  transition: opacity 0.45s;
 }
